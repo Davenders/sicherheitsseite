@@ -17,11 +17,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url("WALLPAPER.jpg") center/cover no-repeat fixed;
+
+            /* Wallpaper */
+            background: url("Banner_Landesgericht.png") center/cover no-repeat fixed;
             color: #e8e8e8;
         }
 
-        /* Dunkler Overlay für epischen Look */
         .overlay {
             position: fixed;
             inset: 0;
@@ -30,21 +31,29 @@
             z-index: 0;
         }
 
-        /* Login-Container */
         .panel {
             position: relative;
             z-index: 1;
-            width: 420px;
-            padding: 40px 36px;
+            width: 430px;
+            padding: 45px 38px 38px;
             background: rgba(10, 10, 15, 0.78);
             border-radius: 18px;
             border: 1px solid rgba(255, 215, 128, 0.25);
             box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(12px);
             animation: fadeIn 0.8s ease;
+            text-align: center;
         }
 
-        /* Goldene Linie oben */
+        /* Logo */
+        .logo {
+            width: 110px;
+            height: auto;
+            margin: 0 auto 18px;
+            display: block;
+            filter: drop-shadow(0 0 6px rgba(0,0,0,0.6));
+        }
+
         .panel::before {
             content: "";
             position: absolute;
@@ -56,9 +65,7 @@
             background: linear-gradient(90deg, transparent, #f5c451, transparent);
         }
 
-        /* Titel */
         h1 {
-            text-align: center;
             font-size: 22px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
@@ -67,17 +74,16 @@
         }
 
         .subtitle {
-            text-align: center;
             font-size: 13px;
             color: #c7c7c7;
             margin-bottom: 28px;
         }
 
-        /* Input */
         label {
             font-size: 13px;
             margin-bottom: 6px;
             display: block;
+            text-align: left;
         }
 
         .input-wrap {
@@ -110,7 +116,6 @@
             color: #f5c451;
         }
 
-        /* Button */
         button {
             width: 100%;
             margin-top: 18px;
@@ -133,16 +138,10 @@
             transform: translateY(-1px);
         }
 
-        button:active {
-            transform: translateY(0);
-        }
-
-        /* Meldungen */
         #msg {
             margin-top: 10px;
             font-size: 12px;
             min-height: 18px;
-            text-align: center;
         }
 
         .error {
@@ -153,7 +152,6 @@
             color: #c7c7c7;
         }
 
-        /* Footer */
         .footer {
             margin-top: 18px;
             font-size: 11px;
@@ -161,7 +159,6 @@
             color: #9a9a9a;
         }
 
-        /* Animation */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
@@ -174,6 +171,10 @@
 <div class="overlay"></div>
 
 <div class="panel">
+
+    <!-- Logo -->
+    <img src="Landesgericht_adler.png" alt="Gerichtssiegel" class="logo">
+
     <h1>Landesgericht Falkenheim</h1>
     <div class="subtitle">Interner Zugang – Kennwort erforderlich</div>
 
